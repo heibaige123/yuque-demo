@@ -2,23 +2,35 @@
   "name": "vite-template-solid",
   "version": "0.0.0",
   "description": "",
-  "scripts": {
-    "start": "vite",
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
-  },
   "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "start": "electron .",
+    "build": "vite build",
+    "serve": "vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "electron": "^31.1.0",
+    "lint-staged": "^15.2.7",
+    "simple-git-hooks": "^2.11.1",
+    "solid-js": "^1.8.11"
+  },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.21.2",
+    "@types/node": "^20.14.9",
+    "eslint": "9.5.0",
+    "eslint-plugin-solid": "^0.14.1",
     "solid-devtools": "^0.29.2",
     "typescript": "^5.3.3",
     "vite": "^5.0.11",
-    "vite-plugin-solid": "^2.8.2",
-    "@antfu/eslint-config": "^2.21.2",
-    "eslint": "9.5.0",
-    "eslint-plugin-solid": "^0.14.1"
+    "vite-plugin-solid": "^2.8.2"
   },
-  "dependencies": {
-    "solid-js": "^1.8.11"
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
