@@ -1,10 +1,21 @@
 {
+  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
   "compilerOptions": {
+    "composite": true,
     "target": "ESNext",
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
+    "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "node",
+    "paths": {
+      "@renderer/*": [
+        "src/renderer/src/*"
+      ]
+    },
+    "types": [
+      "vite/client"
+    ],
     "strict": true,
     "noEmit": true,
     "allowSyntheticDefaultImports": true,
@@ -12,10 +23,9 @@
     "isolatedModules": true
   },
   "include": [
-    "electron.vite.config.*",
-    "src/main/**/*",
-    "src/preload/**/*",
+    "src/renderer/src/env.d.ts",
     "src/renderer/src/**/*",
-    "types/**/*"
+    "src/renderer/src/**/*.tsx",
+    "src/preload/*.d.ts"
   ]
 }
