@@ -1,6 +1,5 @@
-import { resolve } from 'node:path';
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite';
-import solid from 'vite-plugin-solid';
+import { viteWebBasicConfig } from './config/vite-web.basic.config';
 
 export default defineConfig({
   main: {
@@ -13,14 +12,5 @@ export default defineConfig({
       externalizeDepsPlugin(),
     ],
   },
-  renderer: {
-    resolve: {
-      alias: {
-        '@renderer': resolve('src/renderer/src'),
-      },
-    },
-    plugins: [
-      solid(),
-    ],
-  },
+  renderer: viteWebBasicConfig,
 });
