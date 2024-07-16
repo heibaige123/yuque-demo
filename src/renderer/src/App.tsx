@@ -1,9 +1,17 @@
-import type { Component } from 'solid-js';
+import { type Component, createSignal } from 'solid-js';
+import { Layout } from './layout/Layout';
+import { DefaultSelectId, MenuConfig } from './config';
 
 const App: Component = () => {
+  const [selectId, setSelectId] = createSignal(DefaultSelectId);
+
   return (
     <>
-      <div class="bg-amber text-blue">测试</div>
+      <Layout
+        selectId={selectId}
+        setSelectId={setSelectId}
+        menuConfig={MenuConfig}
+      />
     </>
   );
 };
