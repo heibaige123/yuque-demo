@@ -23,8 +23,18 @@
     "build:linux": "electron-vite build && electron-builder --linux"
   },
   "dependencies": {
+    "@editorjs/checklist": "^1.6.0",
+    "@editorjs/editorjs": "^2.30.2",
+    "@editorjs/header": "^2.8.7",
+    "@editorjs/list": "^1.9.0",
+    "@editorjs/nested-list": "^1.4.2",
+    "@editorjs/table": "^2.3.0",
     "@electron-toolkit/preload": "^3.0.1",
     "@electron-toolkit/utils": "^3.0.0",
+    "@solidjs/router": "^0.14.1",
+    "@textbus/adapter-viewfly": "4.0.0-alpha.64",
+    "@textbus/core": "4.0.0-alpha.64",
+    "@textbus/platform-browser": "4.0.0-alpha.64",
     "lint-staged": "^15.2.7",
     "simple-git-hooks": "^2.11.1",
     "solid-js": "^1.8.11"
@@ -34,6 +44,8 @@
     "@electron-toolkit/tsconfig": "^1.0.1",
     "@types/node": "^20.14.9",
     "@unocss/cli": "^0.61.0",
+    "@unocss/postcss": "^0.61.3",
+    "@unocss/preset-wind": "^0.61.3",
     "electron": "^31.1.0",
     "electron-builder": "^24.13.3",
     "electron-vite": "^2.3.0",

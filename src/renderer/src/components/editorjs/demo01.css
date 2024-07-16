@@ -1,0 +1,10 @@
+.ce-block__content, 
+.ce-toolbar__content {
+  max-width:  100%;
+  /* @apply p-4; */
+  @apply mx-20;
+}
+
+.codex-editor {
+  @apply p-4 huo-border border rounded-lg shadow-md;
+}
