@@ -5,3 +5,5 @@ export function Editor(): React.JSX.Element {
     </div>
   );
 }
+
+console.log(1);
