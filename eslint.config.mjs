@@ -1,7 +1,7 @@
 import antfu from '@antfu/eslint-config';
 
 export default antfu({
-  solid: true,
+  react: true,
   stylistic: {
     indent: 2,
     quotes: 'single',
@@ -11,6 +11,7 @@ export default antfu({
     overrides: {
       'no-console': 'off',
       'ts/strict-boolean-expressions': 'off',
+      'no-under-init': 'off',
     },
   },
 });

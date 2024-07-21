@@ -1,19 +1,24 @@
-import { type Component, createSignal } from 'solid-js';
-import { Layout } from './layout/Layout';
-import { DefaultSelectId, MenuConfig } from './config';
+import React from 'react';
+import {
+  Content,
+  Footer,
+  Header,
+  Layout,
+  type LayoutProps,
+  LeftAside,
+} from './pages';
 
-const App: Component = () => {
-  const [selectId, setSelectId] = createSignal(DefaultSelectId);
-
-  return (
-    <>
-      <Layout
-        selectId={selectId}
-        setSelectId={setSelectId}
-        menuConfig={MenuConfig}
-      />
-    </>
-  );
+const slots: LayoutProps = {
+  LeftAside,
+  Header,
+  Content,
+  Footer,
 };
+
+function App(): React.JSX.Element {
+  return (
+    <Layout {...slots} />
+  );
+}
 
 export default App;

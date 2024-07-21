@@ -4,7 +4,7 @@
     "composite": true,
     "target": "ESNext",
     "jsx": "preserve",
-    "jsxImportSource": "solid-js",
+    "jsxImportSource": "react-js",
     "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "node",

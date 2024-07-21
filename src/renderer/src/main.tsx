@@ -1,11 +1,13 @@
-import { render } from 'solid-js/web';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 // import 'uno.css';
 import 'virtual:uno.css';
 import 'virtual:unocss-devtools';
-import App from './App';
 import './assets/style/index.css';
+import App from './App';
 
-render(
-  () => <App />,
-  document.getElementById('root') as HTMLElement,
+ReactDOM.createRoot(document.querySelector('#root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
 );

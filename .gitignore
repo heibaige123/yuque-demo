@@ -3,3 +3,5 @@ dist
 output
 out
 .DS_Store
+.idea
+.yarn

@@ -2,10 +2,9 @@
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
   "files.exclude": {
-    "**/.git": true,
+    // "**/.git": true,
     "src/main": true,
     "src/preload": true,
-
     "resources": true,
     "out": true,
     "build": true
@@ -88,10 +87,16 @@
   ],
   "cSpell.words": [
     "antfu",
+    "asar",
+    "corepack",
     "cusor",
-    "solidjs",
+    "editorjs",
+    "electronjs",
+    "nsis",
     "textbus",
     "typecheck",
-    "unocss"
+    "unocss",
+    "vite",
+    "yuque"
   ]
 }
