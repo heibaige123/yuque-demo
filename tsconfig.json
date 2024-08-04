@@ -2,8 +2,14 @@
   "compilerOptions": {
     "target": "ESNext",
     "jsx": "react-jsx",
+    "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "node",
+    "paths": {
+      "@*": [
+        "src/*"
+      ]
+    },
     "strict": true,
     "noEmit": true,
     "allowSyntheticDefaultImports": true,
@@ -15,6 +21,7 @@
     "src/main/**/*",
     "src/preload/**/*",
     "src/renderer/src/**/*",
-    "types/**/*"
+    "src/types/**/*",
+    "src/lib"
   ]
 }

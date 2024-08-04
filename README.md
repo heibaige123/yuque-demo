@@ -8,6 +8,12 @@
 
 - [slate](https://github.com/ianstormtaylor/slate?tab=readme-ov-file)
 
+### js库
+
+- [react](https://zh-hans.react.dev/reference/react)
+
+- [ahooks](https://ahooks.js.org/zh-CN/hooks)
+
 ## eslint规则可视化
 
 ```shell

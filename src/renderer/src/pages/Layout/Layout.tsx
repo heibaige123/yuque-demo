@@ -17,7 +17,12 @@ export function Layout({
         {LeftAside()}
       </div>
       <div className="flex-1 flex flex-col bg-slate-50 scroll-smooth overflow-y-auto">
-        <div className="flex-none h-[3rem] sticky top-0 w-full bg-slate-50 shadow-sm">
+        <div className="
+            flex-none h-[3rem] w-full
+            sticky z-1 top-0
+            bg-slate-50 shadow-sm
+          "
+        >
           {Header()}
         </div>
         <div className="flex-1 mt-[3rem]">

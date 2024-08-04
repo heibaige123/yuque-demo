@@ -20,6 +20,7 @@ export const viteWebBasicConfig: UserConfig = {
   resolve: {
     alias: {
       '@renderer': resolve('src/renderer/src'),
+      '@': resolve('src'),
     },
   },
 };
