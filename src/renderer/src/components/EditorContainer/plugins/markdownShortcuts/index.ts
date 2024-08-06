@@ -1,12 +1,12 @@
 import { deleteBackward } from './deleteBackward';
 import { insertText } from './insertText';
-import type { CustomEditor } from '@/types/slate';
+import type { CustomEditor } from '@/types';
 
 export * from './shortcuts';
 
 export function withMarkdownShortcuts(editor: CustomEditor) {
-  editor.insertText = insertText(editor);
-  editor.deleteBackward = deleteBackward(editor);
+	editor.insertText = insertText(editor);
+	editor.deleteBackward = deleteBackward(editor);
 
-  return editor;
+	return editor;
 }

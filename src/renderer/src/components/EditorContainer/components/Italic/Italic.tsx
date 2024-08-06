@@ -1,12 +1,12 @@
-import type { SlateReact_RenderLeafProps } from '@lib/slate-react';
+import type { RenderLeafProps } from 'slate-react';
 
 export function Italic({
-  attributes,
-  children,
-}: SlateReact_RenderLeafProps) {
-  return (
-    <span className="font-italic" {...attributes}>
-      {children}
-    </span>
-  );
+	attributes,
+	children,
+}: RenderLeafProps) {
+	return (
+		<span className="font-italic" {...attributes}>
+			{children}
+		</span>
+	);
 }

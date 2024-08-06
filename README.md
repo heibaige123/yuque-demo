@@ -8,13 +8,15 @@
 
 - [slate](https://github.com/ianstormtaylor/slate?tab=readme-ov-file)
 
-- https://www.cnblogs.com/WindrunnerMax/p/16413011.html
-
 ### js库
 
 - [react](https://zh-hans.react.dev/reference/react)
 
 - [ahooks](https://ahooks.js.org/zh-CN/hooks)
+
+### ui库
+
+- [shadcn/ui](https://ui.shadcn.com/)
 
 ## eslint规则可视化
 

@@ -1,12 +1,12 @@
-import type { SlateReact_RenderLeafProps } from '@lib/slate-react';
+import type { RenderLeafProps } from 'slate-react';
 
 export function Underline({
-  attributes,
-  children,
-}: SlateReact_RenderLeafProps) {
-  return (
-    <span
-      className="
+	attributes,
+	children,
+}: RenderLeafProps) {
+	return (
+		<span
+			className="
       after:content-['']
       after:h-[10px]
       after:bg-pink-500
@@ -19,9 +19,9 @@ export function Underline({
 
       underline underline-offset-4 relative
     "
-      {...attributes}
-    >
-      {children}
-    </span>
-  );
+			{...attributes}
+		>
+			{children}
+		</span>
+	);
 }

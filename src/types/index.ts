@@ -1,3 +1,2 @@
-export * from './custom-element-types';
-export * from './type-utils';
-export * from './slate.d';
+export * from './slate';
+export * from './utils';

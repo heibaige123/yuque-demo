@@ -1,12 +1,12 @@
-import type { SlateReact_RenderLeafProps } from '@lib/slate-react';
+import type { RenderLeafProps } from 'slate-react';
 
 export function Bold({
-  attributes,
-  children,
-}: SlateReact_RenderLeafProps) {
-  return (
-    <span className="font-extrabold" {...attributes}>
-      {children}
-    </span>
-  );
+	attributes,
+	children,
+}: RenderLeafProps) {
+	return (
+		<span className="font-extrabold" {...attributes}>
+			{children}
+		</span>
+	);
 }

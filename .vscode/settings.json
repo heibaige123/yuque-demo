@@ -1,104 +1,108 @@
 {
-  // Disable the default formatter, use eslint instead
-  "prettier.enable": false,
-  "files.exclude": {
-    // "**/.git": true,
-    "src/main": true,
-    "src/preload": true,
-    "resources": true,
-    "out": true,
-    "build": true
-    // "config": true
-  },
-  "editor.formatOnSave": false,
-  // Auto fix
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never"
-  },
-  "files.associations": {
-    "*.css": "tailwindcss"
-  },
-  // Silent the stylistic rules in you IDE, but still auto fix them
-  "eslint.rules.customizations": [
-    {
-      "rule": "style/*",
-      "severity": "off"
-    },
-    {
-      "rule": "format/*",
-      "severity": "off"
-    },
-    {
-      "rule": "*-indent",
-      "severity": "off"
-    },
-    {
-      "rule": "*-spacing",
-      "severity": "off"
-    },
-    {
-      "rule": "*-spaces",
-      "severity": "off"
-    },
-    {
-      "rule": "*-order",
-      "severity": "off"
-    },
-    {
-      "rule": "*-dangle",
-      "severity": "off"
-    },
-    {
-      "rule": "*-newline",
-      "severity": "off"
-    },
-    {
-      "rule": "*quotes",
-      "severity": "off"
-    },
-    {
-      "rule": "*semi",
-      "severity": "off"
-    }
-  ],
-  // Enable eslint for all supported languages
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue",
-    "html",
-    "markdown",
-    "json",
-    "jsonc",
-    "yaml",
-    "toml",
-    "xml",
-    "gql",
-    "graphql",
-    "astro",
-    "css",
-    "less",
-    "scss",
-    "pcss",
-    "postcss"
-  ],
-  "cSpell.words": [
-    "ahooks",
-    "antfu",
-    "asar",
-    "contenteditable",
-    "corepack",
-    "cusor",
-    "editorjs",
-    "electronjs",
-    "nsis",
-    "textbus",
-    "typecheck",
-    "unocss",
-    "vite",
-    "yuque"
-  ]
+	// Disable the default formatter, use eslint instead
+	"prettier.enable": false,
+	"files.exclude": {
+		// "**/.git": true,
+		"src/main": true,
+		"src/preload": true,
+		"resources": true,
+		"out": true,
+		"build": true
+		// "config": true
+	},
+	"editor.formatOnSave": false,
+	// Auto fix
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "never"
+	},
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	// Silent the stylistic rules in you IDE, but still auto fix them
+	"eslint.rules.customizations": [
+		{
+			"rule": "style/*",
+			"severity": "off"
+		},
+		{
+			"rule": "format/*",
+			"severity": "off"
+		},
+		{
+			"rule": "*-indent",
+			"severity": "off"
+		},
+		{
+			"rule": "*-spacing",
+			"severity": "off"
+		},
+		{
+			"rule": "*-spaces",
+			"severity": "off"
+		},
+		{
+			"rule": "*-order",
+			"severity": "off"
+		},
+		{
+			"rule": "*-dangle",
+			"severity": "off"
+		},
+		{
+			"rule": "*-newline",
+			"severity": "off"
+		},
+		{
+			"rule": "*quotes",
+			"severity": "off"
+		},
+		{
+			"rule": "*semi",
+			"severity": "off"
+		}
+	],
+	// Enable eslint for all supported languages
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"vue",
+		"html",
+		"markdown",
+		"json",
+		"jsonc",
+		"yaml",
+		"toml",
+		"xml",
+		"gql",
+		"graphql",
+		"astro",
+		"css",
+		"less",
+		"scss",
+		"pcss",
+		"postcss"
+	],
+	"cSpell.words": [
+		"ahooks",
+		"antfu",
+		"asar",
+		"clsx",
+		"contenteditable",
+		"corepack",
+		"cusor",
+		"editorjs",
+		"electronjs",
+		"nocheck",
+		"nsis",
+		"shadcn",
+		"textbus",
+		"typecheck",
+		"unocss",
+		"unplugin",
+		"vite",
+		"yuque"
+	]
 }

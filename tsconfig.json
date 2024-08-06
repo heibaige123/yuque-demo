@@ -1,27 +1,27 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "jsx": "react-jsx",
-    "baseUrl": ".",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "paths": {
-      "@*": [
-        "src/*"
-      ]
-    },
-    "strict": true,
-    "noEmit": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "isolatedModules": true
-  },
-  "include": [
-    "electron.vite.config.*",
-    "src/main/**/*",
-    "src/preload/**/*",
-    "src/renderer/src/**/*",
-    "src/types/**/*",
-    "src/lib"
-  ]
+	"compilerOptions": {
+		"target": "ESNext",
+		"jsx": "react-jsx",
+		"baseUrl": ".",
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"paths": {
+			"@*": [
+				"src/*"
+			]
+		},
+		"strict": true,
+		"noEmit": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"isolatedModules": true
+	},
+	"include": [
+		"electron.vite.config.*",
+		"src/main/**/*",
+		"src/preload/**/*",
+		"src/renderer/src/**/*",
+		"src/types/**/*",
+		"src/lib"
+	]
 }

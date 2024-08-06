@@ -3,38 +3,38 @@ import { BoldEditor, HighlightEditor, ItalicEditor, UnderlineEditor } from '../c
 import type { CustomEditor } from '@/types';
 
 const HotKeyMap = [
-  {
-    key: 'b',
-    customEditor: BoldEditor,
-  },
-  {
-    key: 'i',
-    customEditor: ItalicEditor,
-  },
-  {
-    key: 'h',
-    customEditor: HighlightEditor,
-  },
-  {
-    key: 'u',
-    customEditor: UnderlineEditor,
-  },
+	{
+		key: 'b',
+		customEditor: BoldEditor,
+	},
+	{
+		key: 'i',
+		customEditor: ItalicEditor,
+	},
+	{
+		key: 'h',
+		customEditor: HighlightEditor,
+	},
+	{
+		key: 'u',
+		customEditor: UnderlineEditor,
+	},
 ];
 
 export function onKeyDown(event: React.KeyboardEvent<HTMLDivElement>, editor: CustomEditor) {
-  if (!event.metaKey) {
-    return;
-  }
+	if (!event.metaKey) {
+		return;
+	}
 
-  event.preventDefault();
+	event.preventDefault();
 
-  console.log('onKeyDown', event);
+	console.log('onKeyDown', event);
 
-  const key = event.key.toLocaleLowerCase();
-  const hotMap = HotKeyMap.find(item => item.key === key);
+	const key = event.key.toLocaleLowerCase();
+	const hotMap = HotKeyMap.find(item => item.key === key);
 
-  if (hotMap) {
-    hotMap.customEditor.toggleMark(editor);
-    // Slate_Editor.addMark(editor, hotMap.customEditor.type, true);
-  }
+	if (hotMap) {
+		hotMap.customEditor.toggleMark(editor);
+		// Slate_Editor.addMark(editor, hotMap.customEditor.type, true);
+	}
 }

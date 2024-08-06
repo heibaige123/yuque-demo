@@ -4,5 +4,5 @@ import type { CustomText } from '@/types';
 export * from './Highlight';
 
 export class HighlightEditor extends CustomBaseEditor {
-  static type: keyof CustomText = 'highlight';
+	static type: keyof CustomText = 'highlight';
 }
