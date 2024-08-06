@@ -67,7 +67,7 @@ export function insertText(editor: CustomEditor) {
 			}
 		}
 
-		// 标题
+		// 标题、列表
 		if (text.endsWith(' ') && selection && Slate_Range.isCollapsed(selection)) {
 			const { anchor } = selection;
 			const block = Slate_Editor.above(editor, {
@@ -80,6 +80,8 @@ export function insertText(editor: CustomEditor) {
 				Slate_Editor.string(editor, range) + text.slice(0, -1)
 			) as unknown as keyof typeof SHORTCUTS;
 			const type = SHORTCUTS[beforeText] as CustomElement['type'];
+
+			console.log('type', type);
 
 			if (type) {
 				Slate_Transforms.select(editor, range);

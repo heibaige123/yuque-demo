@@ -37,7 +37,10 @@ export interface H6Element extends BaseTitleElement {
 export interface CodeBlockElement {
 	type: 'code_block';
 }
-
 export interface CheckboxElement {
 	type: 'checkbox';
+}
+
+export interface ListElement {
+	type: 'list';
 }
