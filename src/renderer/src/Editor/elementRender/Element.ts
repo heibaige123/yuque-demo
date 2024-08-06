@@ -1,5 +1,5 @@
 import type { RenderElementProps } from 'slate-react';
-import { CodeBlockEditable, Title } from '../components';
+import { CodeBlockEditable, MarkdownCheckbox, Title } from '../components';
 
 export function Element(props: RenderElementProps): React.JSX.Element {
 	switch (props.element.type) {
@@ -12,6 +12,8 @@ export function Element(props: RenderElementProps): React.JSX.Element {
 			return Title(props);
 		case 'code_block':
 			return CodeBlockEditable(props);
+		case 'checkbox':
+			return MarkdownCheckbox(props);
 		default:
 			return SlateReact_DefaultElement(props);
 	}

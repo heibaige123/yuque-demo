@@ -1,4 +1,4 @@
-import type { Slate_BaseEditor } from '@/lib/slate';
-import type { SlateReact_ReactEditor } from '@/lib/slate-react';
+import type { BaseEditor } from 'slate';
+import type { ReactEditor } from 'slate-react';
 
-export type SlateEditor = Slate_BaseEditor & SlateReact_ReactEditor;
+export type SlateEditor = BaseEditor & ReactEditor;

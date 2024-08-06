@@ -3,7 +3,7 @@ import type { UserConfig } from 'vite';
 import reactPlugin from '@vitejs/plugin-react';
 import UnoCSS from 'unocss/vite';
 import AutoImport from 'unplugin-auto-import/vite';
-import { SlateImportMap, SlateReactImportMap } from './auto-import-map';
+import { SlateImportMap, SlateReactImportMap } from './autoImportMap';
 
 /**
  * vite-web基础配置
@@ -42,7 +42,7 @@ export const viteWebBasicConfig: UserConfig = {
 	},
 	resolve: {
 		alias: {
-			'@renderer': resolve('src/renderer/src'),
+			'@renderer': `${resolve(__dirname, 'src/renderer/src')}/`,
 			'@': resolve('src'),
 		},
 	},

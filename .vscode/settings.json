@@ -1,15 +1,15 @@
 {
-	// Disable the default formatter, use eslint instead
 	"prettier.enable": false,
 	"files.exclude": {
 		// "**/.git": true,
-		"src/main": true,
-		"src/preload": true,
-		"resources": true,
-		"out": true,
-		"build": true
+		// "src/main": true,
+		// "src/preload": true,
+		// "resources": true,
+		// "out": true,
+		// "build": true
 		// "config": true
 	},
+	"editor.rulers": [100, 120],
 	"editor.formatOnSave": false,
 	// Auto fix
 	"editor.codeActionsOnSave": {
@@ -95,6 +95,7 @@
 		"cusor",
 		"editorjs",
 		"electronjs",
+		"lucide",
 		"nocheck",
 		"nsis",
 		"shadcn",

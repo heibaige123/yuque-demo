@@ -1,9 +1,8 @@
 import type React from 'react';
+import type { RenderLeafProps } from 'slate-react';
 import { Bold, Highlight, Italic, Underline } from '../components';
-import type { SlateReact_RenderLeafProps } from '@/lib/slate-react';
-import { SlateReact_DefaultLeaf } from '@/lib/slate-react';
 
-export function renderLeaf(props: SlateReact_RenderLeafProps): React.JSX.Element {
+export function renderLeaf(props: RenderLeafProps): React.JSX.Element {
 	const { leaf } = props;
 
 	// console.log('leaf', props);

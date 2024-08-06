@@ -3,7 +3,7 @@ import type { RenderElementProps } from 'slate-react';
 export function CodeBlockEditable({
 	attributes,
 	children,
-}: RenderElementProps) {
+}: RenderElementProps): React.JSX.Element {
 	return (
 		<div
 			{...attributes}

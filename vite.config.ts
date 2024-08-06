@@ -1,4 +1,4 @@
 import { defineConfig } from 'vite';
-import { viteWebBasicConfig } from './config/vite-web.basic.config';
+import { viteWebBasicConfig } from './config/viteWeb.basic.config';
 
 export default defineConfig(viteWebBasicConfig);

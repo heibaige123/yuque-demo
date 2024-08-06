@@ -1,7 +1,7 @@
 import type React from 'react';
 import type { RenderElementProps } from 'slate-react';
 import { withCodeBlockVoid, withMarkdownShortcuts } from './plugins';
-import { onContainerDoubleClick, onDOMBeforeInput, onKeyDown } from './editor-event';
+import { onContainerDoubleClick, onDOMBeforeInput, onKeyDown } from './editorEvent';
 import { Element, renderLeaf } from './elementRender';
 import type { CustomElement } from '@/types';
 
@@ -17,7 +17,7 @@ const initialValue: CustomElement[] = [{
 	],
 }];
 
-export function EditorContainer(): React.JSX.Element {
+export function Editor(): React.JSX.Element {
 	const renderElement = useCallback(
 		(props: RenderElementProps) => <Element {...props} />,
 		[],

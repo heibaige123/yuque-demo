@@ -10,6 +10,8 @@ export const SHORTCUTS: {
 	'#####': 'h5',
 	'######': 'h6',
 	'```': 'code_block',
+	'- [ ]': 'checkbox',
+	'-[ ]': 'checkbox',
 };
 
 export const SHORTCUTS_VALUES = Object.values(SHORTCUTS);
