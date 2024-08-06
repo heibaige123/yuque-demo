@@ -7,10 +7,8 @@ export {
   Transforms as Slate_Transforms,
   Node as Slate_Node,
   type TextUnit as Slate_TextUnit,
-
   type BaseEditor as Slate_BaseEditor,
 
   Location as Slate_Location,
-
   Path as Slate_Path,
 } from 'slate';

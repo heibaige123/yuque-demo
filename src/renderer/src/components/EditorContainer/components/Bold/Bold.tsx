@@ -1,11 +1,11 @@
 import type { SlateReact_RenderLeafProps } from '@lib/slate-react';
 
-export function Highlight({
+export function Bold({
   attributes,
   children,
 }: SlateReact_RenderLeafProps) {
   return (
-    <span className="bg-amber rounded-2xl" {...attributes}>
+    <span className="font-extrabold" {...attributes}>
       {children}
     </span>
   );

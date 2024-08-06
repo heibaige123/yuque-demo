@@ -33,3 +33,7 @@ export interface H5Element extends BaseTitleElement {
 export interface H6Element extends BaseTitleElement {
   type: 'h6';
 }
+
+export interface CodeBlockElement {
+  type: 'code_block';
+}

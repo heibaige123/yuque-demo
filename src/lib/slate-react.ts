@@ -6,10 +6,8 @@ export {
   Editable as SlateReact_Editable,
   Slate as SlateReact_Slate,
   withReact as SlateReact_withReact,
-
   ReactEditor as SlateReact_ReactEditor,
   DefaultElement as SlateReact_DefaultElement,
-
   DefaultLeaf as SlateReact_DefaultLeaf,
-
+  useFocused as SlateReact_useFocused,
 } from 'slate-react';

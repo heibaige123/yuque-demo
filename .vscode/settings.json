@@ -89,6 +89,7 @@
     "ahooks",
     "antfu",
     "asar",
+    "contenteditable",
     "corepack",
     "cusor",
     "editorjs",
