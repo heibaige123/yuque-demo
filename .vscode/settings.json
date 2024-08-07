@@ -1,5 +1,5 @@
 {
-	"prettier.enable": false,
+	// "prettier.enable": false,
 	"files.exclude": {
 		// "**/.git": true,
 		// "src/main": true,
@@ -16,6 +16,13 @@
 		"source.fixAll.eslint": "explicit",
 		"source.organizeImports": "never"
 	},
+	"prettier.printWidth": 100,
+	"prettier.tabWidth": 2,
+	"prettier.bracketSameLine": false,
+	"prettier.bracketSpacing": true,
+	"prettier.quoteProps": "preserve",
+	"prettier.semi": true,
+	"prettier.singleQuote": true,
 	"files.associations": {
 		"*.css": "tailwindcss"
 	},

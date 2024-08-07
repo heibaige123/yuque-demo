@@ -44,3 +44,8 @@ export interface CheckboxElement {
 export interface ListElement {
 	type: 'list';
 }
+
+export interface NumberListElement {
+	type: 'number_list';
+	numberOrder: string;
+}

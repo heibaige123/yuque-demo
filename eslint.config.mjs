@@ -17,7 +17,7 @@ export default antfu({
 			'ts/strict-boolean-expressions': 'off',
 			'no-under-init': 'off',
 			'max-len': ['error', {
-				code: 100,
+				code: 120,
 			}],
 			'import/order': ['error', {
 				'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],

@@ -10,10 +10,7 @@ export const SHORTCUTS: {
 	'#####': 'h5',
 	'######': 'h6',
 	'```': 'code_block',
-
-	'- [ ]': 'checkbox',
 	'-[ ]': 'checkbox',
-
 	'-': 'list',
 	'+': 'list',
 	'*': 'list',

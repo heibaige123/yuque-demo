@@ -5,7 +5,7 @@ import { Bold, Highlight, Italic, Underline } from '../components';
 export function renderLeaf(props: RenderLeafProps): React.JSX.Element {
 	const { leaf } = props;
 
-	// console.log('leaf', props);
+	console.log('leaf', props);
 
 	if (leaf.bold) {
 		return Bold(props);

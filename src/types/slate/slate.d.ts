@@ -10,6 +10,7 @@ import type {
 	H5Element,
 	H6Element,
 	ListElement,
+	NumberListElement,
 	ParagraphElement,
 } from './custom-element-types';
 
@@ -28,6 +29,7 @@ export type CustomElement =
 	| H6Element
 	| CodeBlockElement
 	| ListElement
+	| NumberListElement
 	| CheckboxElement;
 
 export type CustomText = {
