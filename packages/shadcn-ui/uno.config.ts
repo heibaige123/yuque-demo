@@ -10,10 +10,15 @@ import presetAnimations from 'unocss-preset-animations';
 import { presetShadcn } from 'unocss-preset-shadcn';
 
 export default defineConfig({
+	cli: {
+		entry: [{
+			patterns: ['./src/**/*.{tsx,css}'],
+			outFile: './dist/style.css',
+		}],
+	},
 	content: {
 		filesystem: [
-			'./packages/note-editor/src/renderer/**/*.tsx',
-			'./packages/shadcn-ui/src/**/*.tsx',
+			'/src/**/*.{tsx,css}',
 		],
 		pipeline: {
 			exclude: ['./packages/**/node_modules'],

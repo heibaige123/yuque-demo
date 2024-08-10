@@ -25,4 +25,7 @@ export default antfu({
 			}],
 		},
 	},
+	ignores: [
+		'packages/shadcn-ui/src/*',
+	],
 });
