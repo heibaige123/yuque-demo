@@ -30,9 +30,11 @@
 		"slate-react": "^0.107.1"
 	},
 	"devDependencies": {
+		"@biomejs/biome": "1.8.3",
 		"@electron-toolkit/tsconfig": "^1.0.1",
 		"electron": "^31.1.0",
 		"electron-builder": "^24.13.3",
-		"electron-vite": "^2.3.0"
+		"electron-vite": "^2.3.0",
+		"shiki": "^1.12.1"
 	}
 }

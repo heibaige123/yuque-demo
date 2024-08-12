@@ -9,3 +9,8 @@ body, #root {
 a {
   text-decoration: inherit;
 }
+
+.huo-ordered-list-item::before {
+  content: var(--order-number);
+  @apply: font-bold mr-2;
+}

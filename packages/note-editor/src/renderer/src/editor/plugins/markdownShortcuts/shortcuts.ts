@@ -11,9 +11,10 @@ export const SHORTCUTS: {
 	'######': 'h6',
 	'```': 'code_block',
 	'-[ ]': 'checkbox',
-	'-': 'list',
-	'+': 'list',
-	'*': 'list',
+	'-': 'bulleted_list_item',
+	'+': 'bulleted_list_item',
+	'*': 'bulleted_list_item',
+	'--': 'divider',
 };
 
 export const SHORTCUTS_VALUES = Object.values(SHORTCUTS);

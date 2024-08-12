@@ -1,16 +1,18 @@
 import type { BaseEditor } from 'slate';
 import type { ReactEditor } from 'slate-react';
 import type {
+	BulletedListElement,
+	BulletedListItemElement,
 	CheckboxElement,
 	CodeBlockElement,
+	DividerElement,
 	H1Element,
 	H2Element,
 	H3Element,
 	H4Element,
 	H5Element,
 	H6Element,
-	ListElement,
-	NumberListElement,
+	OrderedListElement,
 	ParagraphElement,
 } from './custom-element-types';
 
@@ -20,7 +22,7 @@ interface EmptyText {
 
 export type CustomEditor = BaseEditor & ReactEditor;
 export type CustomElement =
-	ParagraphElement
+	| ParagraphElement
 	| H1Element
 	| H2Element
 	| H3Element
@@ -28,8 +30,10 @@ export type CustomElement =
 	| H5Element
 	| H6Element
 	| CodeBlockElement
-	| ListElement
-	| NumberListElement
+	| BulletedListElement
+	| OrderedListElement
+	| BulletedListItemElement
+	| DividerElement
 	| CheckboxElement;
 
 export type CustomText = {

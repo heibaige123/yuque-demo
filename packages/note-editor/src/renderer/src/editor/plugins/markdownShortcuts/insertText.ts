@@ -1,27 +1,72 @@
 import { Editor, Element, Range, Transforms } from 'slate';
 import { SHORTCUTS } from './shortcuts';
-import type { CustomEditor, CustomElement } from '@/types';
-
-type Shortcuts_Key = keyof typeof SHORTCUTS;
+import type { BulletedListElement, CustomEditor, CustomElement } from '@/types';
 
 function getBeforeText(lastWord: string, text: string, selectText: string) {
-	let beforeText: Shortcuts_Key = '';
-
 	switch (lastWord) {
 		// 块级代码块
 		case '`':
 		case ']':
-			beforeText = text.slice(0);
-			break;
-			// 标题、列表、checkbox
+			return selectText + text.slice(0);
+			// 标题、无序列表、checkbox
 		case ' ':
-			beforeText = text.slice(0, -1);
-			break;
+			return selectText + text.slice(0, -1);
+		case '-':
+			if (selectText.length < 2) {
+				return '';
+			}
+
+			// 分割线
+			return selectText + text.slice(0, -2);
 	}
 
-	console.log('beforeText', beforeText);
+	return '';
+}
 
-	return selectText + beforeText;
+function transformsNode({
+	editor,
+	range,
+	type,
+	beforeText,
+}: {
+	editor: CustomEditor;
+	range: Range;
+	type: CustomElement['type'];
+	beforeText: string;
+}) {
+	Transforms.select(editor, range);
+	if (!Range.isCollapsed(range)) {
+		Transforms.delete(editor);
+	}
+
+	Transforms.setNodes(
+		editor,
+		{
+			type,
+			order: beforeText,
+		},
+		{
+			match: node => Element.isElement(node) && Editor.isBlock(editor, node),
+		},
+	);
+
+	console.log({
+		type,
+		range,
+	});
+
+	switch (type) {
+		case 'bulleted_list_item': {
+			const bulletedList: BulletedListElement = {
+				type: 'bulleted-list',
+				children: [],
+			};
+			Transforms.wrapNodes(editor, bulletedList, {
+				match: n => !Editor.isEditor(n) && Element.isElement(n) && n.type === 'list_item',
+			});
+			break;
+		}
+	}
 }
 
 export function insertText(editor: CustomEditor) {
@@ -30,13 +75,14 @@ export function insertText(editor: CustomEditor) {
 	return (text: string) => {
 		const { selection } = editor;
 		const lastWord = text.at(-1) as string;
-		const includeArr = [' ', '`', ']'];
+		const includeArr = [' ', '`', ']', '-'];
 
 		if (includeArr.includes(lastWord) && selection && Range.isCollapsed(selection)) {
 			const { anchor } = selection;
 			const block = Editor.above(editor, {
 				match: node => Element.isElement(node) && Editor.isBlock(editor, node),
 			});
+
 			const path = block ? block[1] : [];
 			const start = Editor.start(editor, path);
 			const range = { anchor, focus: start };
@@ -46,26 +92,16 @@ export function insertText(editor: CustomEditor) {
 
 			// 数值列表
 			if (/\d+\.?/.test(beforeText)) {
-				type = 'number_list';
+				type = 'ordered_list';
 			}
 
 			if (type) {
-				Transforms.select(editor, range);
-				if (!Range.isCollapsed(range)) {
-					Transforms.delete(editor);
-				}
-
-				Transforms.setNodes(
+				transformsNode({
 					editor,
-					{
-						type,
-						numberOrder: beforeText,
-					},
-					{
-						match: node => Element.isElement(node) && Editor.isBlock(editor, node),
-					},
-				);
-
+					range,
+					type,
+					beforeText,
+				});
 				return;
 			}
 		}

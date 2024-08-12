@@ -32,9 +32,10 @@ export function deleteBackward(editor: CustomEditor) {
 					}
 
 					Transforms.unwrapNodes(editor, {
-						match: node => Editor.isEditor(node)
-						&& Element.isElement(node)
-						&& SHORTCUTS_VALUES.includes(node.type),
+						match: node =>
+							Editor.isEditor(node)
+							&& Element.isElement(node)
+							&& SHORTCUTS_VALUES.includes(node.type),
 						split: true,
 					});
 				}

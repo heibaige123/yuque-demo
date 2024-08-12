@@ -41,11 +41,21 @@ export interface CheckboxElement {
 	type: 'checkbox';
 }
 
-export interface ListElement {
-	type: 'list';
+export interface DividerElement {
+	type: 'divider';
 }
 
-export interface NumberListElement {
-	type: 'number_list';
-	numberOrder: string;
+export interface BulletedListElement {
+	type: 'bulleted_list';
+	children: Descendant[];
+}
+
+export interface OrderedListElement {
+	type: 'ordered_list';
+	children: Descendant[];
+	order: string;
+}
+
+export interface BulletedListItemElement {
+	type: 'bulleted_list_item';
 }

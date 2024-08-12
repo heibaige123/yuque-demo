@@ -1,17 +1,15 @@
 import type { RenderElementProps } from 'slate-react';
 
-export function List({
+export function BulletedList({
 	attributes,
 	children,
 }: RenderElementProps): React.JSX.Element {
 	return (
-		<div
+		<ul
 			{...attributes}
-			className="flex items-center"
+			className="list-disc flex items-center"
 		>
-			<ul className="list-disc">
-				<li>{children}</li>
-			</ul>
-		</div>
+			{children}
+		</ul>
 	);
 };

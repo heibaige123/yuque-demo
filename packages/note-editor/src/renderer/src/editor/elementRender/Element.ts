@@ -1,5 +1,13 @@
 import { DefaultElement, type RenderElementProps } from 'slate-react';
-import { CodeBlockEditable, List, MarkdownCheckbox, NumberList, Title } from '../components';
+import {
+	BulletedList,
+	BulletedListItem,
+	CodeBlockEditable,
+	Divider,
+	MarkdownCheckbox,
+	OrderedList,
+	Title,
+} from '../components';
 
 export function Element(props: RenderElementProps): React.JSX.Element {
 	switch (props.element.type) {
@@ -14,10 +22,14 @@ export function Element(props: RenderElementProps): React.JSX.Element {
 			return CodeBlockEditable(props);
 		case 'checkbox':
 			return MarkdownCheckbox(props);
-		case 'list':
-			return List(props);
-		case 'number_list':
-			return NumberList(props);
+		case 'bulleted_list_item':
+			return BulletedListItem(props);
+		case 'bulleted_list':
+			return BulletedList(props);
+		case 'ordered_list':
+			return OrderedList(props);
+		case 'divider':
+			return Divider(props);
 		default:
 			return DefaultElement(props);
 	}
