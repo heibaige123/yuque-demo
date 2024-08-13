@@ -8,7 +8,8 @@
 		"node": ">=22.0.0"
 	},
 	"scripts": {
-		"web-dev": "pnpm --filter @huo-note/note-editor web-dev"
+		"web-dev": "pnpm --filter @huo-note/note-editor web-dev",
+		"add": "pnpm --filter @huo-note/shadcn-ui add"
 	},
 	"dependencies": {
 		"react": "^18.3.1",

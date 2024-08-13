@@ -12,7 +12,7 @@
 	"tsx": true,
 	"aliases": {
 		"components": "@",
-		"utils": "@/utils",
+		"utils": "@huo-note/shadcn-ui-utils",
 		"ui": "@/ui"
 	}
 }
