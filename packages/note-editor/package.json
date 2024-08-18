@@ -1,40 +1,41 @@
 {
-	"name": "@huo-note/note-editor",
-	"type": "module",
-	"version": "0.0.0",
-	"description": "",
-	"main": "./main/index.ts",
-	"scripts": {
-		"web-dev": "vite",
-		"serve": "vite preview",
-		"lint": "eslint .",
-		"lint:fix": "eslint . --fix",
-		"lint-staged": "eslint . --fix",
-		"typecheck": "npm run typecheck:node && npm run typecheck:web",
-		"start": "electron-vite preview",
-		"dev": "electron-vite dev",
-		"build": "npm run typecheck && electron-vite build",
-		"postinstall": "electron-builder install-app-deps",
-		"build:unpack": "npm run build && electron-builder --dir",
-		"build:win": "npm run build && electron-builder --win",
-		"build:mac": "electron-vite build && electron-builder --mac",
-		"build:linux": "electron-vite build && electron-builder --linux"
-	},
-	"dependencies": {
-		"@electron-toolkit/preload": "^3.0.1",
-		"@electron-toolkit/utils": "^3.0.0",
-		"@huo-note/shadcn-ui": "workspace:*",
-		"prism": "^4.1.2",
-		"slate": "^0.103.0",
-		"slate-history": "^0.100.0",
-		"slate-react": "^0.107.1"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.8.3",
-		"@electron-toolkit/tsconfig": "^1.0.1",
-		"electron": "^31.1.0",
-		"electron-builder": "^24.13.3",
-		"electron-vite": "^2.3.0",
-		"shiki": "^1.12.1"
-	}
+    "name": "@huo-note/note-editor",
+    "type": "module",
+    "version": "0.0.0",
+    "description": "",
+    "main": "./main/index.ts",
+    "scripts": {
+        "web-dev": "vite",
+        "serve": "vite preview",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "lint-staged": "eslint . --fix",
+        "typecheck": "npm run typecheck:node && npm run typecheck:web",
+        "start": "electron-vite preview",
+        "dev": "electron-vite dev",
+        "build": "npm run typecheck && electron-vite build",
+        "postinstall": "electron-builder install-app-deps",
+        "build:unpack": "npm run build && electron-builder --dir",
+        "build:win": "npm run build && electron-builder --win",
+        "build:mac": "electron-vite build && electron-builder --mac",
+        "build:linux": "electron-vite build && electron-builder --linux"
+    },
+    "dependencies": {
+        "@electron-toolkit/preload": "^3.0.1",
+        "@electron-toolkit/utils": "^3.0.0",
+        "@huo-note/code-editor": "workspace:*",
+        "@huo-note/shadcn-ui": "workspace:*",
+        "immer": "^10.1.1",
+        "slate": "^0.103.0",
+        "slate-history": "^0.100.0",
+        "slate-react": "^0.107.1"
+    },
+    "devDependencies": {
+        "@electron-toolkit/tsconfig": "^1.0.1",
+        "@types/prismjs": "^1.26.4",
+        "@vitejs/plugin-react": "^4.3.1",
+        "electron": "^31.1.0",
+        "electron-builder": "^24.13.3",
+        "electron-vite": "^2.3.0"
+    }
 }

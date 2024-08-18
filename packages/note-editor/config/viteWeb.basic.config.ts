@@ -9,19 +9,19 @@ import UnoCSS from 'unocss/vite';
  *        - electron渲染进程开发调试react
  */
 export const viteWebBasicConfig: UserConfig = {
-	plugins: [
-		UnoCSS(),
-		reactPlugin(),
+    plugins: [
+        UnoCSS(),
+        reactPlugin(),
 
-	],
-	build: {
-		target: 'esnext',
-		rollupOptions: {
-			output: {
-				manualChunks: {
-					'react-vendor': ['react', 'react-dom'],
-				},
-			},
-		},
-	},
+    ],
+    build: {
+        target: 'esnext',
+        rollupOptions: {
+            output: {
+                manualChunks: {
+                    'react-vendor': ['react', 'react-dom'],
+                },
+            },
+        },
+    },
 };

@@ -7,6 +7,7 @@
 ### 编辑器
 
 - [slate](https://github.com/ianstormtaylor/slate?tab=readme-ov-file)
+- [Prism](https://github.com/PrismJS/prism)
 
 ### js库
 

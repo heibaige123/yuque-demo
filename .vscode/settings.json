@@ -1,116 +1,123 @@
 {
-	// "prettier.enable": false,
-	"files.exclude": {
-		// "**/.git": true,
-		// "packages/note-editor/src/main": true,
-		// "packages/note-editor/src/preload": true,
-		// "packages/note-editor/resources": true,
-		// "out": true,
-		// "build": true,
-		// "config": true
-	},
-	"editor.rulers": [100, 120],
-	"editor.formatOnSave": false,
-	// Auto fix
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "explicit",
-		"source.organizeImports": "never"
-	},
-	"prettier.printWidth": 100,
-	"prettier.tabWidth": 2,
-	"prettier.bracketSameLine": false,
-	"prettier.bracketSpacing": true,
-	"prettier.quoteProps": "preserve",
-	"prettier.semi": true,
-	"prettier.singleQuote": true,
-	"files.associations": {
-		"*.css": "tailwindcss"
-	},
-	// Silent the stylistic rules in you IDE, but still auto fix them
-	"eslint.rules.customizations": [
-		{
-			"rule": "style/*",
-			"severity": "off"
-		},
-		{
-			"rule": "format/*",
-			"severity": "off"
-		},
-		{
-			"rule": "*-indent",
-			"severity": "off"
-		},
-		{
-			"rule": "*-spacing",
-			"severity": "off"
-		},
-		{
-			"rule": "*-spaces",
-			"severity": "off"
-		},
-		{
-			"rule": "*-order",
-			"severity": "off"
-		},
-		{
-			"rule": "*-dangle",
-			"severity": "off"
-		},
-		{
-			"rule": "*-newline",
-			"severity": "off"
-		},
-		{
-			"rule": "*quotes",
-			"severity": "off"
-		},
-		{
-			"rule": "*semi",
-			"severity": "off"
-		}
-	],
-	// Enable eslint for all supported languages
-	"eslint.validate": [
-		"javascript",
-		"javascriptreact",
-		"typescript",
-		"typescriptreact",
-		"vue",
-		"html",
-		"markdown",
-		"json",
-		"jsonc",
-		"yaml",
-		"toml",
-		"xml",
-		"gql",
-		"graphql",
-		"astro",
-		"css",
-		"less",
-		"scss",
-		"pcss",
-		"postcss"
-	],
-	"cSpell.words": [
-		"ahooks",
-		"antfu",
-		"asar",
-		"clsx",
-		"contenteditable",
-		"corepack",
-		"cusor",
-		"editorjs",
-		"electronjs",
-		"lucide",
-		"nocheck",
-		"nsis",
-		"shadcn",
-		"textbus",
-		"typecheck",
-		"unocss",
-		"unplugin",
-		"vite",
-		"yuque"
-	]
+    // "prettier.enable": false,
+    "files.exclude": {
+        // "**/.git": true,
+        "packages/note-editor/src/main": true,
+        "packages/note-editor/src/preload": true,
+        "packages/note-editor/resources": true
+        // "out": true,
+        // "build": true,
+        // "config": true
+    },
+    "editor.rulers": [100, 120],
+    "editor.formatOnSave": false,
+    // Auto fix
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.organizeImports": "never"
+    },
+    "prettier.printWidth": 100,
+    "prettier.tabWidth": 2,
+    "prettier.bracketSameLine": false,
+    "prettier.bracketSpacing": true,
+    "prettier.quoteProps": "preserve",
+    "prettier.semi": true,
+    "prettier.singleQuote": true,
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    // Silent the stylistic rules in you IDE, but still auto fix them
+    "eslint.rules.customizations": [
+        {
+            "rule": "style/*",
+            "severity": "off"
+        },
+        {
+            "rule": "format/*",
+            "severity": "off"
+        },
+        {
+            "rule": "*-indent",
+            "severity": "off"
+        },
+        {
+            "rule": "*-spacing",
+            "severity": "off"
+        },
+        {
+            "rule": "*-spaces",
+            "severity": "off"
+        },
+        {
+            "rule": "*-order",
+            "severity": "off"
+        },
+        {
+            "rule": "*-dangle",
+            "severity": "off"
+        },
+        {
+            "rule": "*-newline",
+            "severity": "off"
+        },
+        {
+            "rule": "*quotes",
+            "severity": "off"
+        },
+        {
+            "rule": "*semi",
+            "severity": "off"
+        }
+    ],
+    // Enable eslint for all supported languages
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "vue",
+        "html",
+        "markdown",
+        "json",
+        "jsonc",
+        "yaml",
+        "toml",
+        "xml",
+        "gql",
+        "graphql",
+        "astro",
+        "css",
+        "less",
+        "scss",
+        "pcss",
+        "postcss"
+    ],
+    "cSpell.words": [
+        "ahooks",
+        "antfu",
+        "asar",
+        "beforeinput",
+        "clsx",
+        "codemirror",
+        "contenteditable",
+        "corepack",
+        "cusor",
+        "editorjs",
+        "electronjs",
+        "immer",
+        "keymap",
+        "lezer",
+        "lucide",
+        "nocheck",
+        "nsis",
+        "prismjs",
+        "shadcn",
+        "textbus",
+        "thememirror",
+        "typecheck",
+        "unocss",
+        "unplugin",
+        "vite",
+        "yuque"
+    ]
 }
