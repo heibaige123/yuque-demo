@@ -8,12 +8,9 @@ export function CodeBlockEditable({ children, attributes }: RenderElementProps) 
             contentEditable={false}
             data-slate-void
         >
-            <div
-                className="xxx"
-                data-slate-editor
-            >
+            <div className="hidden">{children}</div>
+            <div data-slate-editor>
                 <CodeEditor />
-                <div className="yyyy">{children}</div>
             </div>
         </div>
     );

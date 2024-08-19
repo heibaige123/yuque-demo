@@ -7,8 +7,6 @@ export function voidElement(editor: CustomEditor) {
     const { isVoid } = editor;
 
     return (element: CustomElement) => {
-        console.log('voidElement', element);
-
         const elementIsVoid = Element.isElement(element) && voidElementTypes.includes(element.type);
 
         if (elementIsVoid) {

@@ -7,9 +7,6 @@
     "scripts": {
         "web-dev": "vite",
         "serve": "vite preview",
-        "lint": "eslint .",
-        "lint:fix": "eslint . --fix",
-        "lint-staged": "eslint . --fix",
         "typecheck": "npm run typecheck:node && npm run typecheck:web",
         "start": "electron-vite preview",
         "dev": "electron-vite dev",

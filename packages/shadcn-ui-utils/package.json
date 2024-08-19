@@ -1,13 +1,13 @@
 {
-	"name": "@huo-note/shadcn-ui-utils",
-	"type": "module",
-	"version": "1.0.0",
-	"description": "",
-	"main": "src/index.ts",
-	"scripts": {},
-	"dependencies": {},
-	"devDependencies": {
-		"clsx": "^2.1.1",
-		"tailwind-merge": "^2.4.0"
-	}
+    "name": "@huo-note/shadcn-ui-utils",
+    "type": "module",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/index.ts",
+    "scripts": {},
+    "dependencies": {},
+    "devDependencies": {
+        "clsx": "^2.1.1",
+        "tailwind-merge": "^2.4.0"
+    }
 }

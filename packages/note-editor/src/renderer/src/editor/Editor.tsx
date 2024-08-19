@@ -18,6 +18,14 @@ const initialValue: CustomElement[] = [{
             text: '',
         },
     ],
+}, {
+    type: 'code_block',
+    language: 'typescript',
+    children: [
+        {
+            text: '',
+        },
+    ],
 }];
 
 export function Editor(): React.JSX.Element {
