@@ -17,6 +17,12 @@ importers:
       '@types/node':
         specifier: ^20.14.15
         version: 20.14.15
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.3
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.0
       eslint:
         specifier: ^8.0.0
         version: 8.57.0
@@ -38,6 +44,15 @@ importers:
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
+
+  packages/huo-note-utils:
+    devDependencies:
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      tailwind-merge:
+        specifier: ^2.5.2
+        version: 2.5.2
 
   packages/note-editor:
     dependencies:
@@ -71,6 +86,9 @@ importers:
       '@electron-toolkit/utils':
         specifier: ^3.0.0
         version: 3.0.0(electron@31.4.0)
+      '@huo-note/huo-note-utils':
+        specifier: workspace:*
+        version: link:../huo-note-utils
       '@radix-ui/react-accordion':
         specifier: ^1.2.0
         version: 1.2.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -159,9 +177,6 @@ importers:
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
       electron:
         specifier: ^31.1.0
         version: 31.4.0
@@ -171,9 +186,6 @@ importers:
       electron-vite:
         specifier: ^2.3.0
         version: 2.3.0(vite@4.5.3(@types/node@22.4.1))
-      tailwind-merge:
-        specifier: ^2.5.2
-        version: 2.5.2
       unocss:
         specifier: ^0.62.2
         version: 0.62.2(postcss@8.4.41)(rollup@3.29.4)(vite@4.5.3(@types/node@22.4.1))

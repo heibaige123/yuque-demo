@@ -1,0 +1,14 @@
+{
+    "name": "@huo-note/huo-note-utils",
+    "version": "1.0.0",
+    "description": "",
+    "author": "",
+    "license": "ISC",
+    "keywords": [],
+    "main": "src/index.ts",
+    "scripts": {},
+    "devDependencies": {
+        "clsx": "^2.1.1",
+        "tailwind-merge": "^2.5.2"
+    }
+}
