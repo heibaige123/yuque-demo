@@ -1,12 +1,13 @@
-import {
-    Collapsible,
-    CollapsibleContent,
-    CollapsibleTrigger,
-} from '@huo-note/shadcn-ui';
+import type React from 'react';
 import { useState } from 'react';
 import { TitleInput } from './TitleInput';
 import { LanguageSelect } from './LanguageSelect';
 import { ThemeSelect } from './ThemeSelect';
+import {
+    Collapsible,
+    CollapsibleContent,
+    CollapsibleTrigger,
+} from '@/shadcn-ui';
 
 export function CodeContainer({
     children,

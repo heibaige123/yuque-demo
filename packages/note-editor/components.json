@@ -11,8 +11,8 @@
     "rsc": false,
     "tsx": true,
     "aliases": {
-        "components": "@",
-        "utils": "@huo-note/shadcn-ui-utils",
-        "ui": "@/ui"
+        "components": "@/shadcn-ui/src/components",
+        "utils": "@/utils",
+        "ui": "@/shadcn-ui/src/ui"
     }
 }

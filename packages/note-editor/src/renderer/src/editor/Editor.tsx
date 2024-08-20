@@ -4,7 +4,7 @@ import { useCallback, useMemo } from 'react';
 import { createEditor } from 'slate';
 import { withHistory } from 'slate-history';
 import { withSlatePlugin } from './slate-plugins';
-import { onClick, onDOMBeforeInput, onKeyDown } from './editorEvent';
+import { onDOMBeforeInput, onKeyDown } from './editorEvent';
 import { Element, RenderLeaf } from './node-render';
 import type { CustomElement } from '@/types';
 
@@ -48,7 +48,6 @@ export function Editor(): React.JSX.Element {
         <div className="huo-full px-20 py-10">
             <div
                 className="huo-full shadow-2xl rounded-2xl py-5"
-                onClick={event => onClick(event, editor)}
             >
                 <Slate
                     editor={editor}

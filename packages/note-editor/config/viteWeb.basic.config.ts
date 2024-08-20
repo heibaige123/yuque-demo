@@ -1,3 +1,4 @@
+import path from 'node:path';
 import type { UserConfig } from 'vite';
 import reactPlugin from '@vitejs/plugin-react';
 import UnoCSS from 'unocss/vite';
@@ -12,16 +13,21 @@ export const viteWebBasicConfig: UserConfig = {
     plugins: [
         UnoCSS(),
         reactPlugin(),
-
     ],
     build: {
         target: 'esnext',
         rollupOptions: {
             output: {
+                minifyInternalExports: false,
                 manualChunks: {
-                    'react-vendor': ['react', 'react-dom'],
+                    // 'react-vendor': ['react', 'react-dom'],
                 },
             },
+        },
+    },
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, '../src'),
         },
     },
 };
