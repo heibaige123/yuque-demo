@@ -1,5 +1,5 @@
 import type { RenderElementProps } from 'slate-react';
-import { Checkbox } from '@/shadcn-ui';
+import { Checkbox } from '@huo-note/shadcn-ui';
 
 export function MarkdownCheckbox({
     attributes,

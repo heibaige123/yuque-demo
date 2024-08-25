@@ -1,4 +1,4 @@
-import { Input } from '@/shadcn-ui';
+import { Input } from '@huo-note/shadcn-ui';
 
 export function TitleInput(): React.JSX.Element {
     return (

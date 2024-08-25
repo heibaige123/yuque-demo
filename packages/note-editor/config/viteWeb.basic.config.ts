@@ -1,5 +1,5 @@
 import path from 'node:path';
-import type { UserConfig } from 'vite';
+import type { PluginOption, UserConfig } from 'vite';
 import reactPlugin from '@vitejs/plugin-react';
 
 /**
@@ -10,10 +10,11 @@ import reactPlugin from '@vitejs/plugin-react';
  */
 export const viteWebBasicConfig: UserConfig = {
     plugins: [
-        reactPlugin(),
+        reactPlugin() as PluginOption,
     ],
     build: {
         target: 'esnext',
+        minify: false,
         // minify: 'terser',
         // terserOptions: {
         //     compress: {

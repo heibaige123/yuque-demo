@@ -1,12 +1,12 @@
 import { useAtom } from 'jotai';
-import { LanguageMenu, languageSelect } from './store';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from '@/shadcn-ui';
+} from '@huo-note/shadcn-ui';
+import { LanguageMenu, languageSelect } from './store';
 
 export function LanguageSelect() {
     const [language, setLanguage] = useAtom(languageSelect);

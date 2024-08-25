@@ -1,12 +1,12 @@
 import { useAtom } from 'jotai';
-import { ThemeMenu, themeSelect } from './store';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from '@/shadcn-ui';
+} from '@huo-note/shadcn-ui';
+import { ThemeMenu, themeSelect } from './store';
 
 export function ThemeSelect() {
     const [theme, setTheme] = useAtom(themeSelect);

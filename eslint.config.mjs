@@ -28,6 +28,6 @@ export default antfu({
     ignores: [
         '**/*.yml',
         '**/*.yaml',
-        'packages/note-editor/src/shadcn-ui/**/*.tsx',
+        'packages/shadcn-ui/**/*.{ts,tsx}',
     ],
 });
