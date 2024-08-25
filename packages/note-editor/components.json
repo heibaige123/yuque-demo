@@ -3,7 +3,7 @@
     "style": "default",
     "tailwind": {
         "config": "tailwind.config.js",
-        "css": "styles/global.css",
+        "css": "renderer/src/assets/style/index.css",
         "baseColor": "neutral",
         "cssVariables": true,
         "prefix": ""

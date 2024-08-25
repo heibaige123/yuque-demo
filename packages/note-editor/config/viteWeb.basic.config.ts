@@ -1,7 +1,6 @@
 import path from 'node:path';
 import type { UserConfig } from 'vite';
 import reactPlugin from '@vitejs/plugin-react';
-import UnoCSS from 'unocss/vite';
 
 /**
  * vite-web基础配置
@@ -11,14 +10,20 @@ import UnoCSS from 'unocss/vite';
  */
 export const viteWebBasicConfig: UserConfig = {
     plugins: [
-        UnoCSS(),
         reactPlugin(),
     ],
     build: {
         target: 'esnext',
+        // minify: 'terser',
+        // terserOptions: {
+        //     compress: {
+        //         keep_infinity: true,
+        //         drop_console: true,
+        //         drop_debugger: true,
+        //     },
+        // },
         rollupOptions: {
             output: {
-                minifyInternalExports: false,
                 manualChunks: {
                     // 'react-vendor': ['react', 'react-dom'],
                 },
