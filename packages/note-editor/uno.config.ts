@@ -1,4 +1,7 @@
 // uno.config.ts
+import type {
+    Preset,
+} from 'unocss';
 import {
     defineConfig,
     presetUno,
@@ -12,12 +15,13 @@ import presetIcons from '@unocss/preset-icons';
 
 export default defineConfig({
     content: {
-        filesystem: [
-            './packages/note-editor/src/renderer/**/*.tsx',
-            './packages/shadcn-ui/src/**/*.tsx',
-        ],
         pipeline: {
-            exclude: ['./packages/**/node_modules'],
+            include: [
+                // the default
+                /\.(vue|svelte|[jt]sx|mdx?|astro|elm|php|phtml|html)($|\?)/,
+                // include js/ts files
+                'src/**/*.{js,ts,tsx,jsx}',
+            ],
         },
     },
     transformers: [
@@ -29,7 +33,7 @@ export default defineConfig({
         presetWind(),
         presetAnimations(),
         presetShadcn(),
-        presetIcons(),
+        presetIcons() as Preset,
     ],
     shortcuts: {
         'huo-border': 'border-solid border-slate-900/10',

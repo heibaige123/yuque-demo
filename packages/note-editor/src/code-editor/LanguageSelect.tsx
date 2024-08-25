@@ -1,27 +1,27 @@
+import { useAtom } from 'jotai';
+import { LanguageMenu, languageSelect } from './store';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from '@huo-note/shadcn-ui';
-import { useAtom } from 'jotai';
-import { ThemeMenu, themeSelect } from './store';
+} from '@/shadcn-ui';
 
-export function ThemeSelect() {
-    const [theme, setTheme] = useAtom(themeSelect);
+export function LanguageSelect() {
+    const [language, setLanguage] = useAtom(languageSelect);
 
     return (
         <Select
-            value={theme}
-            onValueChange={theme => setTheme(theme)}
+            value={language}
+            onValueChange={language => setLanguage(language)}
         >
             <SelectTrigger className="w-[180px]">
-                <SelectValue placeholder={theme} />
+                <SelectValue placeholder={language} />
             </SelectTrigger>
             <SelectContent>
                 {
-                    ThemeMenu.map(item => (
+                    LanguageMenu.map(item => (
                         <SelectItem key={item.key} value={item.value}>
                             {item.value}
                         </SelectItem>

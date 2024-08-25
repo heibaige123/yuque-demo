@@ -11,7 +11,9 @@
             ]
         },
         "strict": true,
-        "noEmit": true,
+        "declaration": true,
+        "declarationDir": "dist",
+        "emitDeclarationOnly": true,
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "isolatedModules": true
