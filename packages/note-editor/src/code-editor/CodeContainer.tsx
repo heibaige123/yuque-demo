@@ -23,21 +23,18 @@ export function CodeContainer({
     return (
         <Collapsible open={open}>
             <CollapsibleTrigger asChild>
-                <div className="flex justify-between">
+                <div className="flex justify-between cursor-pointer">
                     <div onClick={handleClick}>
-                        {
-                            open
-                                ? (
-                                        <div
-                                            className="i-fluent-mdl2:chevron-fold-10"
-                                        />
-                                    )
-                                : (
-                                        <div
-                                            className="i-fluent-mdl2:chevron-unfold-10"
-                                        />
-                                    )
-                        }
+                        <span
+                            className={
+                                `w-10 h-10
+                                ${open
+                                    ? 'icon-[uil--scroll]'
+                                    : 'icon-[uis--direction]'
+                                }
+                                `
+                            }
+                        />
                     </div>
 
                     <TitleInput />

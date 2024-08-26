@@ -16,7 +16,7 @@ export function LanguageSelect() {
             value={language}
             onValueChange={language => setLanguage(language)}
         >
-            <SelectTrigger className="w-[180px]">
+            <SelectTrigger className="w-[180px] focus:ring-0 focus:ring-offset-0">
                 <SelectValue placeholder={language} />
             </SelectTrigger>
             <SelectContent>

@@ -16,7 +16,7 @@ export function ThemeSelect() {
             value={theme}
             onValueChange={theme => setTheme(theme)}
         >
-            <SelectTrigger className="w-[180px]">
+            <SelectTrigger className="w-[180px]  focus:ring-0 focus:ring-offset-0">
                 <SelectValue placeholder={theme} />
             </SelectTrigger>
             <SelectContent>
