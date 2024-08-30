@@ -1,0 +1,31 @@
+{
+    "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+    "compilerOptions": {
+        "composite": true,
+        "target": "ESNext",
+        "jsx": "react-jsx",
+        "jsxImportSource": "react",
+        "baseUrl": ".",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ],
+            "~renderer/*": [
+                "./src/renderer/src/*"
+            ]
+        },
+        "types": [
+            "vite/client"
+        ],
+        "strict": true,
+        "noEmit": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "isolatedModules": true
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}

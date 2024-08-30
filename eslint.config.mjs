@@ -28,6 +28,13 @@ export default antfu({
     ignores: [
         '**/*.yml',
         '**/*.yaml',
-        'packages/shadcn-ui/**/*.{ts,tsx}',
+        'src/renderer/src/shadcn-ui/**/*.{ts,tsx}',
+        'out/**/*',
+        'dist/**/*',
+        'node_modules/**/*',
+        'build/**/*',
+        'resources/**/*',
+        '.vscode/**/*',
+        '.husky/**/*',
     ],
 });

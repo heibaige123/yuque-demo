@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "jsx": "react-jsx",
+        "baseUrl": ".",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ],
+            "~renderer/*": [
+                "./src/renderer/src/*"
+            ]
+        },
+        "strict": true,
+        "declaration": true,
+        "declarationDir": "dist",
+        "emitDeclarationOnly": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "isolatedModules": true
+    },
+    "include": [
+        "electron.vite.config.*",
+        "./src/**/*",
+        "src/renderer/vite.config.ts",
+        "postcss.config.cjs",
+        "tailwind.config.js",
+        "tsconfig.node.json",
+        "tsconfig.web.json"
+    ]
+}

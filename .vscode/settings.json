@@ -2,9 +2,9 @@
     // "prettier.enable": false,
     "files.exclude": {
         // "**/.git": true,
-        "packages/note-editor/src/main": true,
-        "packages/note-editor/src/preload": true,
-        "packages/note-editor/resources": true
+        // "packages/note-editor/src/main": true,
+        // "packages/note-editor/src/preload": true,
+        // "packages/note-editor/resources": true
         // "out": true,
         // "build": true,
         // "config": true

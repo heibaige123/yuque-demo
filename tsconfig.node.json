@@ -1,0 +1,23 @@
+{
+    "extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
+    "compilerOptions": {
+        "composite": true,
+        "jsx": "react-jsx",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ],
+            "~renderer/*": [
+                "./src/renderer/src/*"
+            ]
+        },
+        "types": [
+            "electron-vite/node"
+        ]
+    },
+    "include": [
+        "electron.vite.config.*",
+        "./src/**/*"
+    ]
+}
