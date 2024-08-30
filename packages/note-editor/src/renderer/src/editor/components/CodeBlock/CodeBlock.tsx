@@ -1,5 +1,5 @@
 import type { RenderElementProps } from 'slate-react';
-import { CodeEditor } from '@/code-editor';
+import { CodeEditor } from '@/components/ui/code-editor';
 
 export function CodeBlockEditable({ children, attributes }: RenderElementProps) {
     return (

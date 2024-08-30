@@ -17,7 +17,7 @@
         "source.organizeImports": "never"
     },
     "prettier.printWidth": 100,
-    "prettier.tabWidth": 2,
+    "prettier.tabWidth": 4,
     "prettier.bracketSameLine": false,
     "prettier.bracketSpacing": true,
     "prettier.quoteProps": "preserve",
