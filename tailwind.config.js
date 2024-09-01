@@ -4,7 +4,7 @@ const { addDynamicIconSelectors } = require('@iconify/tailwind');
 module.exports = {
     darkMode: ['class'],
     content: [
-        './src/**/*.{ts,tsx}',
+        './src/renderer/**/*.{ts,tsx,css}',
     ],
     prefix: '',
     theme: {

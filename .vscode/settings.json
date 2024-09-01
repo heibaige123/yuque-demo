@@ -1,13 +1,13 @@
 {
     // "prettier.enable": false,
     "files.exclude": {
-        // "**/.git": true,
-        // "packages/note-editor/src/main": true,
-        // "packages/note-editor/src/preload": true,
-        // "packages/note-editor/resources": true
-        // "out": true,
-        // "build": true,
-        // "config": true
+        "**/.git": true,
+        "out": true,
+        "build": true,
+        "config": true,
+        "resources": true,
+        "src/main": true,
+        "src/preload": true
     },
     "editor.rulers": [100, 120],
     "editor.formatOnSave": false,
