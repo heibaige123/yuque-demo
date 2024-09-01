@@ -28,7 +28,7 @@ const treeDemo: TreeFoldProps = {
     ],
 };
 
-export function LeftAside(): React.JSX.Element {
+export const LeftAside: React.FC = () => {
     return (
         <div
             className='
@@ -50,4 +50,4 @@ export function LeftAside(): React.JSX.Element {
             <TreeFold {...treeDemo} />
         </div>
     );
-}
+};

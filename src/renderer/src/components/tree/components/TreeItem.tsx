@@ -60,7 +60,7 @@ function TreeItemIcon(): React.JSX.Element {
     return (
         <span
             className={[
-                'text-gray-400 w-4 h-4',
+                'text-gray-400 p-3 w-4 h-4',
                 'transition-transform duration-75 group-data-[expanded]:rotate-90',
                 'icon-[eva--arrow-right-fill]',
             ].join(' ')}

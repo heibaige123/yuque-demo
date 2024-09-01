@@ -1,12 +1,12 @@
 {
     "files.exclude": {
-        // "**/.git": true,
-        // "out": true,
-        // "build": true,
-        // "config": true,
-        // "resources": true,
-        // "src/main": true,
-        // "src/preload": true
+        "**/.git": true,
+        "out": true,
+        "build": true,
+        "config": true,
+        "resources": true,
+        "src/main": true,
+        "src/preload": true
     },
     "editor.rulers": [100, 120],
     "editor.formatOnSave": false,

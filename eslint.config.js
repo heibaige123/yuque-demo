@@ -7,10 +7,10 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 export default [
     {
         files: ['./src/**/*.{js,ts,jsx,tsx}'],
-        ...pluginReact.configs.flat.recommended,
         ...tseslint.configs.recommended,
         ...pluginJs.configs.recommended,
         eslintPluginPrettierRecommended,
+        ...pluginReact.configs.flat.recommended,
     },
     {
         languageOptions: {

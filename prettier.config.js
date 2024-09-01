@@ -19,4 +19,5 @@ export default {
     bracketSameLine: false,
     jsxBracketSameLine: false,
     singleAttributePerLine: true,
+    htmlWhitespaceSensitivity: 'strict',
 };

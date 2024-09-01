@@ -1,7 +1,7 @@
 import type React from 'react';
 import { Editor } from '../../editor/Editor';
 
-export function Content(): React.JSX.Element {
+export const Content: React.FC = () => {
     return (
         <div className='h-full'>
             <div className='flex h-full'>
@@ -9,4 +9,4 @@ export function Content(): React.JSX.Element {
             </div>
         </div>
     );
-}
+};

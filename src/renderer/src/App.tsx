@@ -1,15 +1,17 @@
 import React from 'react';
-import { Content, Footer, Header, Layout, type LayoutProps, LeftAside } from './pages';
-
-const slots: LayoutProps = {
-    LeftAside,
-    Header,
-    Content,
-    Footer,
-};
+import { Content, Footer, Header, Layout, LeftAside } from './pages';
 
 function App(): React.JSX.Element {
-    return <Layout {...slots} />;
+    return (
+        <Layout
+            {...{
+                Header,
+                Content,
+                LeftAside,
+                Footer,
+            }}
+        />
+    );
 }
 
 export default App;

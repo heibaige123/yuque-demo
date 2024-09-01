@@ -1,0 +1,22 @@
+@layer components {
+    .editor-contenteditable {
+        @apply outline-none ml-6;
+    }
+
+    .editor-placeholder {
+        @apply text-slate-300 leading-4 ml-6;
+        @apply select-none pointer-events-none;
+    }
+
+    .editor-paragraph {
+        @apply relative leading-4;
+    }
+
+    .editor-list-ul {
+        @apply ml-6 list-disc;
+    }
+
+    .editor-heading-h1 {
+        @apply text-[30px];
+    }
+}
