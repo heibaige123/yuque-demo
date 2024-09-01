@@ -26,42 +26,30 @@ export function TreeItem(props: TreeItemProps): React.JSX.Element {
 
     return (
         <div
-            className={
-                [
-                    'group',
-                    'flex select-none',
-                    'min-h-7 px-[8px] py-[5px]',
-                    'cursor-pointer rounded-md',
-                    'hover:bg-slate-200',
-                ].join(' ')
-            }
-            {...(fold
-                ? {}
-                : { 'data-expanded': '' }
-            )}
+            className={[
+                'group',
+                'flex select-none',
+                'min-h-7 px-[8px] py-[5px]',
+                'cursor-pointer rounded-md',
+                'hover:bg-slate-200',
+            ].join(' ')}
+            {...(fold ? {} : { 'data-expanded': '' })}
         >
-            <div
-                className={[
-                    'flex',
-                    isChild && 'pl-3',
-                ].join(' ')}
-            >
+            <div className={['flex', isChild && 'pl-3'].join(' ')}>
                 <div
                     onClick={handleClick}
-                    className="
+                    className='
                         cursor-pointer
                         flex items-center justify-center
                         rounded-sm
                         hover:bg-slate-300
-                    "
+                    '
                 >
                     <TreeItemIcon />
                 </div>
 
-                <div className="ml-1">
-                    <span className={fileInfo.color}>
-                        {fileInfo.text}
-                    </span>
+                <div className='ml-1'>
+                    <span className={fileInfo.color}>{fileInfo.text}</span>
                 </div>
             </div>
         </div>
@@ -77,6 +65,5 @@ function TreeItemIcon(): React.JSX.Element {
                 'icon-[eva--arrow-right-fill]',
             ].join(' ')}
         />
-
     );
 }

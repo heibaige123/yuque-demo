@@ -9,9 +9,7 @@ import reactPlugin from '@vitejs/plugin-react';
  *        - electron渲染进程开发调试react
  */
 export const viteWebBasicConfig: UserConfig = {
-    plugins: [
-        reactPlugin() as PluginOption,
-    ],
+    plugins: [reactPlugin() as PluginOption],
     build: {
         target: 'esnext',
         minify: false,

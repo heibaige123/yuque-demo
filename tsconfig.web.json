@@ -9,23 +9,15 @@
         "module": "ESNext",
         "moduleResolution": "node",
         "paths": {
-            "@/*": [
-                "./src/*"
-            ],
-            "~renderer/*": [
-                "./src/renderer/src/*"
-            ]
+            "@/*": ["./src/*"],
+            "~renderer/*": ["./src/renderer/src/*"]
         },
-        "types": [
-            "vite/client"
-        ],
+        "types": ["vite/client"],
         "strict": true,
         "noEmit": true,
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "isolatedModules": true
     },
-    "include": [
-        "./src/**/*"
-    ]
+    "include": ["./src/**/*"]
 }

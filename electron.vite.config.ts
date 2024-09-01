@@ -3,14 +3,10 @@ import { viteWebBasicConfig } from './config/viteWeb.basic.config';
 
 export default defineConfig({
     main: {
-        plugins: [
-            externalizeDepsPlugin(),
-        ],
+        plugins: [externalizeDepsPlugin()],
     },
     preload: {
-        plugins: [
-            externalizeDepsPlugin(),
-        ],
+        plugins: [externalizeDepsPlugin()],
     },
     renderer: viteWebBasicConfig,
 });

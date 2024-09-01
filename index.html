@@ -1,18 +1,27 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Electron</title>
-    <link type="image/png" sizes="96x96" rel="icon" self href="https://img.icons8.com/color/96/a-cute.png">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <!-- <meta
+    <head>
+        <meta charset="UTF-8" />
+        <title>Electron</title>
+        <link
+            type="image/png"
+            sizes="96x96"
+            rel="icon"
+            self
+            href="https://img.icons8.com/color/96/a-cute.png"
+        />
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+        <!-- <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src https://* data:"
     /> -->
-  </head>
+    </head>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/renderer/src/main.tsx"></script>
-  </body>
+    <body>
+        <div id="root"></div>
+        <script
+            type="module"
+            src="/src/renderer/src/main.tsx"
+        ></script>
+    </body>
 </html>

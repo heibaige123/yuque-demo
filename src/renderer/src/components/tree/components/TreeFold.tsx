@@ -11,30 +11,20 @@ function TreeFoldContent({
     treeFold: boolean;
 }) {
     return (
-        <div
-            className={[
-                'huo-tree-group',
-                treeFold && 'hidden',
-            ].join(' ')}
-        >
-            {
-                treeChildren.map(item => (
-                    <TreeItem
-                        key={item.id}
-                        {...item}
-                        isChild
-                    />
-                ))
-            }
+        <div className={['huo-tree-group', treeFold && 'hidden'].join(' ')}>
+            {treeChildren.map((item) => (
+                <TreeItem
+                    key={item.id}
+                    {...item}
+                    isChild
+                />
+            ))}
         </div>
     );
 }
 
 export function TreeFold(props: TreeFoldProps): React.JSX.Element {
-    const {
-        treeChildren,
-        ...resetProps
-    } = props;
+    const { treeChildren, ...resetProps } = props;
 
     const [treeFold, setTreeFold] = useState(true);
 
@@ -48,14 +38,12 @@ export function TreeFold(props: TreeFoldProps): React.JSX.Element {
                 {...resetProps}
                 onClick={handleClick}
             />
-            {
-                (treeChildren && treeChildren.length) && (
-                    <TreeFoldContent
-                        treeChildren={treeChildren}
-                        treeFold={treeFold}
-                    />
-                )
-            }
+            {treeChildren && treeChildren.length && (
+                <TreeFoldContent
+                    treeChildren={treeChildren}
+                    treeFold={treeFold}
+                />
+            )}
         </div>
     );
 }

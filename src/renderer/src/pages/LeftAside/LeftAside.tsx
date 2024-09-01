@@ -31,7 +31,7 @@ const treeDemo: TreeFoldProps = {
 export function LeftAside(): React.JSX.Element {
     return (
         <div
-            className="
+            className='
                 w-full
                 h-full
                 bg-slate-50
@@ -40,7 +40,7 @@ export function LeftAside(): React.JSX.Element {
                 border-y
                 rounded-md
                 p-5
-            "
+            '
         >
             <TreeItem id={id} />
 

@@ -6,12 +6,8 @@
         "module": "ESNext",
         "moduleResolution": "node",
         "paths": {
-            "@/*": [
-                "./src/*"
-            ],
-            "~renderer/*": [
-                "./src/renderer/src/*"
-            ]
+            "@/*": ["./src/*"],
+            "~renderer/*": ["./src/renderer/src/*"]
         },
         "strict": true,
         "declaration": true,

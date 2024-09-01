@@ -1,13 +1,12 @@
 {
-    // "prettier.enable": false,
     "files.exclude": {
-        "**/.git": true,
-        "out": true,
-        "build": true,
-        "config": true,
-        "resources": true,
-        "src/main": true,
-        "src/preload": true
+        // "**/.git": true,
+        // "out": true,
+        // "build": true,
+        // "config": true,
+        // "resources": true,
+        // "src/main": true,
+        // "src/preload": true
     },
     "editor.rulers": [100, 120],
     "editor.formatOnSave": false,
@@ -16,13 +15,6 @@
         "source.fixAll.eslint": "explicit",
         "source.organizeImports": "never"
     },
-    "prettier.printWidth": 100,
-    "prettier.tabWidth": 4,
-    "prettier.bracketSameLine": false,
-    "prettier.bracketSpacing": true,
-    "prettier.quoteProps": "preserve",
-    "prettier.semi": true,
-    "prettier.singleQuote": true,
     "files.associations": {
         "*.css": "tailwindcss"
     },
@@ -116,10 +108,12 @@
         "noctis",
         "nsis",
         "prismjs",
+        "serviceworker",
         "shadcn",
         "tailwindcss",
         "textbus",
         "thememirror",
+        "tseslint",
         "typecheck",
         "unocss",
         "unplugin",

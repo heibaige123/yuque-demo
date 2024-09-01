@@ -3,9 +3,7 @@ const { addDynamicIconSelectors } = require('@iconify/tailwind');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: ['class'],
-    content: [
-        './src/renderer/**/*.{ts,tsx,css}',
-    ],
+    content: ['./src/renderer/**/*.{ts,tsx,css}'],
     prefix: '',
     theme: {
         container: {
@@ -72,8 +70,5 @@ module.exports = {
             },
         },
     },
-    plugins: [
-        require('tailwindcss-animate'),
-        addDynamicIconSelectors(),
-    ],
+    plugins: [require('tailwindcss-animate'), addDynamicIconSelectors()],
 };

@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-    Content,
-    Footer,
-    Header,
-    Layout,
-    type LayoutProps,
-    LeftAside,
-} from './pages';
+import { Content, Footer, Header, Layout, type LayoutProps, LeftAside } from './pages';
 
 const slots: LayoutProps = {
     LeftAside,
@@ -16,9 +9,7 @@ const slots: LayoutProps = {
 };
 
 function App(): React.JSX.Element {
-    return (
-        <Layout {...slots} />
-    );
+    return <Layout {...slots} />;
 }
 
 export default App;
