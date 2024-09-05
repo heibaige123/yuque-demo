@@ -3,7 +3,7 @@
         "**/.git": true,
         "out": true,
         "build": true,
-        "config": true,
+        // "config": true,
         "resources": true,
         "src/main": true,
         "src/preload": true
@@ -16,7 +16,8 @@
         "source.organizeImports": "never"
     },
     "files.associations": {
-        "*.css": "tailwindcss"
+        "*.css": "tailwindcss",
+        "*.scss": "tailwindcss"
     },
     // Silent the stylistic rules in you IDE, but still auto fix them
     "eslint.rules.customizations": [
@@ -97,10 +98,13 @@
         "contenteditable",
         "corepack",
         "cusor",
+        "dropcursor",
         "editorjs",
         "electronjs",
+        "gapcursor",
         "iconify",
         "immer",
+        "inputrules",
         "keymap",
         "lezer",
         "lucide",
@@ -108,9 +112,11 @@
         "noctis",
         "nsis",
         "prismjs",
+        "prosemirror",
         "serviceworker",
         "shadcn",
         "tailwindcss",
+        "textblock",
         "textbus",
         "thememirror",
         "tseslint",

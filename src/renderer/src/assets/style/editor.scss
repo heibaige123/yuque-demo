@@ -1,0 +1,8 @@
+@layer base {
+    .huo-editor {
+        &-container {
+            @apply outline-none;
+            @apply px-[32px];
+        }
+    }
+}

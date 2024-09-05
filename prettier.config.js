@@ -15,9 +15,9 @@ export default {
     useTabs: false,
     quoteProps: 'consistent',
     jsxSingleQuote: true,
+    jsxBracketSameLine: true,
     bracketSpacing: true,
     bracketSameLine: false,
-    jsxBracketSameLine: false,
     singleAttributePerLine: true,
     htmlWhitespaceSensitivity: 'strict',
 };

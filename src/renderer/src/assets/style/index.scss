@@ -1,5 +1,5 @@
-@import url('./global.css');
-@import url('./lexical-theme.css');
+@import './global.scss';
+@import './editor.scss';
 
 @layer base {
     body,
@@ -8,12 +8,7 @@
     }
 }
 
-@layer utilities {
-    .huo-ordered-list-item::before {
-        content: var(--order-number);
-        @apply font-bold mr-2;
-    }
-
+@layer base {
     .huo-border {
         @apply border-solid border-slate-900/10;
     }
