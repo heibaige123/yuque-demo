@@ -4,20 +4,17 @@ import { schema } from 'prosemirror-schema-basic';
 import { addListNodes } from 'prosemirror-schema-list';
 
 import { exampleSetup } from '../setup';
-import { Schema, DOMParser } from 'prosemirror-model';
+import { DOMParser, Schema } from 'prosemirror-model';
+import React from 'react';
+
+type TRef = React.RefObject<HTMLDivElement>;
 
 const mySchema = new Schema({
     nodes: addListNodes(schema.spec.nodes, 'paragraph block*', 'block'),
     marks: schema.spec.marks,
 });
 
-export function useEditorView({
-    editorRef,
-    contentRef,
-}: {
-    editorRef: React.RefObject<HTMLDivElement>;
-    contentRef: React.RefObject<HTMLDivElement>;
-}) {
+export function useEditorView({ editorRef, contentRef }: { editorRef: TRef; contentRef: TRef }) {
     if (!editorRef.current || !contentRef.current) {
         return null;
     }

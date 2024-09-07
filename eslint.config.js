@@ -1,17 +1,18 @@
-import globals from 'globals';
 import pluginJs from '@eslint/js';
-import tseslint from 'typescript-eslint';
+import pluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import pluginReact from 'eslint-plugin-react';
-import pluginReactRefresh from 'eslint-plugin-react-refresh';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import pluginReactRefresh from 'eslint-plugin-react-refresh';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
 export default [
     {
         files: ['./src/**/*.{js,ts,jsx,tsx}'],
         ...tseslint.configs.recommended,
         ...pluginJs.configs.recommended,
-        eslintPluginPrettierRecommended,
+        pluginPrettierRecommended,
         ...pluginReact.configs.flat.recommended,
         ...pluginReactRefresh,
         ...pluginReactHooks.configs.recommended,
@@ -28,5 +29,14 @@ export default [
     },
     {
         ignores: ['out', 'dist'],
+    },
+    {
+        plugins: {
+            'simple-import-sort': simpleImportSort,
+        },
+        rules: {
+            'simple-import-sort/imports': 'error',
+            'simple-import-sort/exports': 'error',
+        },
     },
 ];

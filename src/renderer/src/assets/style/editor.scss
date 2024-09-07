@@ -4,5 +4,9 @@
             @apply outline-none;
             @apply px-[32px];
         }
+
+        &-bullet-list {
+            @apply list-disc list-inside;
+        }
     }
 }

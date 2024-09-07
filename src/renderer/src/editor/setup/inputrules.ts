@@ -11,7 +11,9 @@ import { NodeType, Schema } from 'prosemirror-model';
 /// Given a blockquote node type, returns an input rule that turns `"> "`
 /// at the start of a textblock into a blockquote.
 export function blockQuoteRule(nodeType: NodeType) {
-    return wrappingInputRule(/^\s*>\s$/, nodeType);
+    return wrappingInputRule(/^\s*>\s$/, nodeType, {
+        class: 'huo-editor-blockquote',
+    });
 }
 
 /// Given a list node type, returns an input rule that turns a number
@@ -20,7 +22,10 @@ export function orderedListRule(nodeType: NodeType) {
     return wrappingInputRule(
         /^(\d+)\.\s$/,
         nodeType,
-        (match) => ({ order: +match[1] }),
+        (match) => ({
+            order: +match[1],
+            class: 'huo-editor-ordered-list',
+        }),
         (match, node) => node.childCount + node.attrs.order == +match[1],
     );
 }
@@ -29,7 +34,9 @@ export function orderedListRule(nodeType: NodeType) {
 /// (dash, plush, or asterisk) at the start of a textblock into a
 /// bullet list.
 export function bulletListRule(nodeType: NodeType) {
-    return wrappingInputRule(/^\s*([-+*])\s$/, nodeType);
+    return wrappingInputRule(/^\s*([-+*])\s$/, nodeType, {
+        class: 'huo-editor-bullet-list',
+    });
 }
 
 /// Given a code block node type, returns an input rule that turns a
@@ -43,10 +50,15 @@ export function codeBlockRule(nodeType: NodeType) {
 /// the start of a textblock into a heading whose level corresponds to
 /// the number of `#` signs.
 export function headingRule(nodeType: NodeType, maxLevel: number) {
+    console.log('headingRule', nodeType, maxLevel);
+
     return textblockTypeInputRule(
         new RegExp('^(#{1,' + maxLevel + '})\\s$'),
         nodeType,
-        (match) => ({ level: match[1].length }),
+        (match) => ({
+            level: match[1].length,
+            class: 'huo-editor-heading',
+        }),
     );
 }
 
@@ -55,8 +67,6 @@ export function headingRule(nodeType: NodeType, maxLevel: number) {
 export function buildInputRules(schema: Schema) {
     let rules = smartQuotes.concat(ellipsis, emDash),
         type;
-
-    console.log(buildInputRules, schema.nodes);
 
     if ((type = schema.nodes.blockquote)) rules.push(blockQuoteRule(type));
     if ((type = schema.nodes.ordered_list)) rules.push(orderedListRule(type));
