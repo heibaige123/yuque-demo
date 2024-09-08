@@ -1,4 +1,3 @@
-import { CodeBlockHeader } from './custom-elements';
 import {
     joinStyles,
     cx,
@@ -7,6 +6,7 @@ import {
     ApplySchemaAttributes,
     DOMOutputSpec,
 } from '@remirror/core';
+import { renderCodeBlockHeader } from './components/code-block-header';
 
 const LANGUAGE_ATTRIBUTE = 'data-code-block-language';
 
@@ -25,7 +25,7 @@ export function codeBlockToDOM(node: ProsemirrorNode, extra: ApplySchemaAttribut
         class: cx(extraAttrs.class, `language-${language}`),
     };
 
-    CodeBlockHeader('huo-code-block-header');
+    renderCodeBlockHeader('huo-code-block-header');
 
     return [
         'div',

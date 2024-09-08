@@ -25,7 +25,7 @@
         "tailwind.config.js",
         "tsconfig.node.json",
         "tsconfig.web.json",
-        "huo-remirror/remirror/remirror__extension-code-block/src/code-block-extension.ts",
-        "huo-remirror/remirror/remirror__extension-code-block/src/code-block-utils.tsx"
+        "src/renderer/src/editor/remirror/src/code-block/code-block-extension.ts",
+        "src/renderer/src/editor/remirror/src/code-block/code-block-utils.tsx"
     ]
 }

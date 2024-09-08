@@ -1,14 +1,11 @@
 import '@remirror/styles/all.css';
 
 import React, { FC, PropsWithChildren, useCallback } from 'react';
-import jsx from 'refractor/lang/jsx.js';
-import typescript from 'refractor/lang/typescript.js';
 import { ExtensionPriority } from 'remirror';
 import {
     BlockquoteExtension,
     BoldExtension,
     BulletListExtension,
-    CodeBlockExtension,
     CodeExtension,
     HardBreakExtension,
     HeadingExtension,
@@ -25,17 +22,14 @@ import {
 import { EditorComponent, Remirror, ThemeProvider, useRemirror } from '@remirror/react';
 import { AllStyledComponent } from '@remirror/styles/emotion';
 
-import { HuoCodeBlockExtension } from '@huo-remirror/remirror';
+import { HuoCodeBlockExtension } from '../code-block/code-block-extension';
 
-import { ReactEditorProps } from '../../types';
+import { ReactEditorProps } from './types';
 
 export default { title: 'Editors / Markdown' };
 
 export interface MarkdownEditorProps extends Partial<Omit<ReactEditorProps, 'stringHandler'>> {}
 
-/**
- * The editor which is used to create the annotation. Supports formatting.
- */
 export const BaseMarkdownEditor: FC<PropsWithChildren<MarkdownEditorProps>> = ({
     placeholder,
     children,
