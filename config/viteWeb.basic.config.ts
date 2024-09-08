@@ -1,6 +1,7 @@
 import path from 'node:path';
 import type { PluginOption, UserConfig } from 'vite';
 import reactPlugin from '@vitejs/plugin-react';
+import reactRefresh from '@vitejs/plugin-react-refresh';
 
 /**
  * vite-web基础配置
@@ -9,7 +10,7 @@ import reactPlugin from '@vitejs/plugin-react';
  *        - electron渲染进程开发调试react
  */
 export const viteWebBasicConfig: UserConfig = {
-    plugins: [reactPlugin() as PluginOption],
+    plugins: [reactPlugin() as PluginOption, reactRefresh()],
     build: {
         target: 'esnext',
         minify: false,

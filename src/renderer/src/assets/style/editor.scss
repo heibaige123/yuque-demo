@@ -1,12 +1,5 @@
 @layer base {
-    .huo-editor {
-        &-container {
-            @apply outline-none;
-            @apply px-[32px];
-        }
-
-        &-bullet-list {
-            @apply list-disc list-inside;
-        }
+    .remirror-ul-list-content {
+        @apply ml-[22px];
     }
 }

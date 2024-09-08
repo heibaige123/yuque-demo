@@ -24,6 +24,8 @@
         "postcss.config.js",
         "tailwind.config.js",
         "tsconfig.node.json",
-        "tsconfig.web.json"
+        "tsconfig.web.json",
+        "huo-remirror/remirror/remirror__extension-code-block/src/code-block-extension.ts",
+        "huo-remirror/remirror/remirror__extension-code-block/src/code-block-utils.tsx"
     ]
 }

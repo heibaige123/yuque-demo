@@ -8,6 +8,7 @@
         "src/main": true,
         "src/preload": true
     },
+    "prettier.prettierPath": "node_modules/prettier/",
     "editor.rulers": [100, 120],
     "editor.formatOnSave": false,
     // Auto fix
@@ -113,6 +114,7 @@
         "nsis",
         "prismjs",
         "prosemirror",
+        "Remirror",
         "serviceworker",
         "shadcn",
         "tailwindcss",

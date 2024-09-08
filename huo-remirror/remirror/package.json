@@ -1,0 +1,23 @@
+{
+    "name": "@huo-remirror/remirror",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@remirror/core": "^3.0.1",
+        "@remirror/extension-code-block": "^3.0.1",
+        "@remirror/extension-react-component": "^3.0.1",
+        "@remirror/react": "^3.0.1",
+        "@remirror/react-core": "^3.0.1",
+        "@remirror/styles": "^3.0.0",
+        "@remirror/theme": "^3.0.0",
+        "lit": "^3.2.0",
+        "remirror": "^3.0.1"
+    }
+}
