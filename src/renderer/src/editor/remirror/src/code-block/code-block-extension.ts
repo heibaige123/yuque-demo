@@ -1,4 +1,9 @@
-import { ApplySchemaAttributes, NodeSpecOverride, NodeExtensionSpec } from '@remirror/core';
+import {
+    ApplySchemaAttributes,
+    NodeSpecOverride,
+    NodeExtensionSpec,
+    command,
+} from '@remirror/core';
 import { CodeBlockExtension } from '@remirror/extension-code-block';
 import { codeBlockToDOM } from './code-block-utils';
 
@@ -9,7 +14,16 @@ export class HuoCodeBlockExtension extends CodeBlockExtension {
         return {
             ...result,
             toDOM: (node) => {
-                return codeBlockToDOM(node, extra);
+                return codeBlockToDOM({
+                    node,
+                    extra,
+                    languageChange: (language) => {
+                        console.log('language--Change', language);
+                    },
+                    themeChange: (theme) => {
+                        console.log('themeChange', theme);
+                    },
+                });
             },
         };
     }

@@ -7,10 +7,19 @@ import {
     DOMOutputSpec,
 } from '@remirror/core';
 import { renderCodeBlockHeader } from './components/code-block-header';
+import { CommonProps } from './interface';
 
 const LANGUAGE_ATTRIBUTE = 'data-code-block-language';
 
-export function codeBlockToDOM(node: ProsemirrorNode, extra: ApplySchemaAttributes): DOMOutputSpec {
+export function codeBlockToDOM({
+    node,
+    extra,
+    languageChange,
+    themeChange,
+}: {
+    node: ProsemirrorNode;
+    extra: ApplySchemaAttributes;
+} & Omit<CommonProps, 'initLanguage'>): DOMOutputSpec {
     const { language, wrap } = omitExtraAttributes(node.attrs, extra);
     const { style: _, ...extraAttrs } = extra.dom(node);
     let style = extraAttrs.style;
@@ -25,7 +34,12 @@ export function codeBlockToDOM(node: ProsemirrorNode, extra: ApplySchemaAttribut
         class: cx(extraAttrs.class, `language-${language}`),
     };
 
-    renderCodeBlockHeader('huo-code-block-header');
+    renderCodeBlockHeader({
+        elementName: 'huo-code-block-header',
+        languageChange,
+        themeChange,
+        initLanguage: language as string,
+    });
 
     return [
         'div',

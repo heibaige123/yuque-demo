@@ -3,31 +3,48 @@ import r2wc from '@r2wc/react-to-web-component';
 import { TitleInput } from './title-input';
 import { LanguageSelect } from './language-select';
 import { ThemeSelect } from './theme-select';
+import { RenderCustomElement } from '~renderer/shadcn-ui';
+import { CommonProps } from '../interface';
 
-import style from '~renderer/assets/style/index.scss?url';
+function CodeBlockHeaderCore({ themeChange, languageChange, initLanguage }: CommonProps) {
+    return () => {
+        return (
+            <RenderCustomElement>
+                <div className='flex justify-between cursor-pointer'>
+                    <TitleInput />
+                    <LanguageSelect
+                        languageChange={languageChange}
+                        initLanguage={initLanguage}
+                    />
+                    <ThemeSelect themeChange={themeChange} />
+                </div>
+            </RenderCustomElement>
+        );
+    };
+}
 
-const CodeBlockHeaderCore: React.FC = () => {
-    return (
-        <div className='flex justify-between cursor-pointer'>
-            <link
-                rel='stylesheet'
-                href={style}
-            />
-            <TitleInput />
-            <LanguageSelect />
-            <ThemeSelect />
-        </div>
-    );
-};
-
-export function renderCodeBlockHeader(elementName: string = 'code-block-header') {
+export function renderCodeBlockHeader({
+    elementName = 'code-block-header',
+    themeChange,
+    languageChange,
+    initLanguage,
+}: {
+    elementName: string;
+} & CommonProps) {
     if (customElements.get(elementName)) {
         return;
     }
 
-    const CodeBlockHeader = r2wc(CodeBlockHeaderCore, {
-        shadow: 'open',
-    });
+    const CodeBlockHeader = r2wc(
+        CodeBlockHeaderCore({
+            languageChange,
+            themeChange,
+            initLanguage,
+        }),
+        {
+            shadow: 'open',
+        },
+    );
 
     customElements.define(elementName, CodeBlockHeader);
 }

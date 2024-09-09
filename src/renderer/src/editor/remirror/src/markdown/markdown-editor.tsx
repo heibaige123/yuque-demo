@@ -21,12 +21,15 @@ import {
 } from 'remirror/extensions';
 import { EditorComponent, Remirror, ThemeProvider, useRemirror } from '@remirror/react';
 import { AllStyledComponent } from '@remirror/styles/emotion';
+import css from 'refractor/lang/css.js';
+import javascript from 'refractor/lang/javascript.js';
+import json from 'refractor/lang/json.js';
+import markdown from 'refractor/lang/markdown.js';
+import typescript from 'refractor/lang/typescript.js';
+import jsx from 'refractor/lang/jsx.js';
 
 import { HuoCodeBlockExtension } from '../code-block/code-block-extension';
-
 import { ReactEditorProps } from './types';
-
-export default { title: 'Editors / Markdown' };
 
 export interface MarkdownEditorProps extends Partial<Omit<ReactEditorProps, 'stringHandler'>> {}
 
@@ -52,7 +55,9 @@ export const BaseMarkdownEditor: FC<PropsWithChildren<MarkdownEditorProps>> = ({
                 enableCollapsible: true,
             }),
             new CodeExtension(),
-            new HuoCodeBlockExtension({}),
+            new HuoCodeBlockExtension({
+                // supportedLanguages: [css, javascript, json, markdown, typescript, jsx],
+            }),
             new TrailingNodeExtension({}),
             new TableExtension({}),
             new MarkdownExtension({ copyAsMarkdown: false }),

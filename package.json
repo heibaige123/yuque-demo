@@ -53,6 +53,7 @@
         "@remirror/core": "^3.0.1",
         "@remirror/extension-code-block": "^3.0.1",
         "@remirror/react": "^3.0.1",
+        "@remirror/react-core": "^3.0.1",
         "@remirror/styles": "^3.0.0",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.1",
